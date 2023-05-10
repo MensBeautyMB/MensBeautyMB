@@ -1,0 +1,670 @@
+<html>
+<head>
+   
+    <title>MensBeautyMB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b356ad9dc8.js" crossorigin="anonymous"></script>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+html{
+   font-size: stretch;
+   scroll-behavior: smooth;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-size: stretch;
+   scroll-behavior: smooth;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+.container{
+   min-height: 70vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    line-height: 60px;
+    height: 75px;
+    background: #091f27;
+}
+
+nav .navbar-brand {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: .2rem;
+}
+
+nav .nav-list {
+    display: flex;
+}
+
+nav .nav-list .nav-item {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 30px;
+    transition: .4s;
+    color: #FFF;
+    margin: 0px;
+    margin-right: px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    width: 170;
+    list-style-type: none;
+}
+
+nav .nav-list .nav-item:hover {
+    background: skyblue;
+    text-decoration: blink;
+}
+
+nav .nav-list .nav-link {
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media (max-width: 935px) {
+
+    nav {
+        padding: 0 2rem;
+    }
+
+    nav .nav-list .nav-item {
+        padding: 0 20px;
+    }
+
+}
+
+@media (max-width: 675px) {
+
+    nav .nav-list {
+        display: grid;
+        position: absolute;
+        background: #091f27;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: -1;
+        transition: .6s;
+    }
+
+    nav .nav-list .nav-item {
+        padding-left: 35px;
+    }
+
+    nav .navbar-toggler {
+        display: grid !important;
+    }
+
+}
+
+nav .navbar-toggler {
+    display: none;
+    height: min-content;
+    margin: 18px -10px 0 0;
+    cursor: pointer;
+}
+
+nav .navbar-toggler .bar {
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border-radius: 10%;
+    transition: .4s;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ nav .nav-list {
+    transform: translateY(0);
+}
+
+input:checked ~ nav .navbar-toggler {
+    margin-top: 35px;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
+    display: none;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+#HOME .HOME-a{
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: auto;
+   color: #FFFFFF;
+   font-size: 25px;
+   min-height: 8vh;
+   transition: .3 ease background-color;
+}
+/*End HOME Section*/
+
+/*Home Section*/
+#Home{
+   font-size: 3rem;
+   text-align: center;
+   color: white;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://www.thegoodtrade.com/wp-content/uploads/2023/01/sustainable-mens-clothing.jpeg);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   height: 100vh;
+}
+#Home .Home {
+   max-width: 1200px;
+   margin: 0 auto;
+   justify-content: flex;
+}
+#Home h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    text-align: center;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+#Home .container span{
+   position: absolute;
+   top: 75%;
+   left: 0;
+   height: 25%;
+   width: 0;
+   background-color: lightblue;
+   animation: text_reveal_box 1s ease;
+   animation-delay: 1s;
+}
+/*End Home Section*/
+
+/* CLOTHINGS Section */
+#CLOTHINGS{
+   text-align: center;
+   background-color: white;
+   letter-spacing: .05rem;
+   padding: 100px 0;
+}
+#CLOTHINGS{
+   text-align: center;
+   background-color: white;
+}
+#CLOTHINGS h2{
+   font-size: 3rem;
+   color: black;
+}
+#CLOTHINGS p{
+   font-size: 4rem;
+}
+/*  End CLOTHINGS Section */
+
+/*  CROCHET Section */
+#PRODUCTS{
+   text-align: center;
+   background-color: white;
+      padding: 100px 0;
+}
+#PRODUCTS h2{
+   font-size: 3rem;
+   color: black;
+}
+#PRODUCTS p{
+   font-size: 4rem;
+   color: black;
+}
+/*  End CROCHET Section */
+
+/*  ABOUT Section */
+#ABOUT{
+   text-align: center;
+   background-color: white;
+   padding: 100px 0;
+}
+#ABOUT h2{
+   font-size: 3rem;
+   color: black;
+}
+#ABOUT p{
+   font-size: 4rem;
+}
+/*  End ABOUT Section */
+
+/*  CONTACT Section */
+#CONTACT{
+   text-align: center;
+   background-color: white;
+   padding: 100px 0;
+}
+#CONTACT h1{
+   font-size: 3rem;
+   color: black;
+}
+#CONTACT p{
+   font-size: 4rem;
+}
+#CONTACT .CONTACT{
+   flex-direction: column;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+#CONTACT .CONTACT-items {
+      width: 100%;
+}
+#CONTACT .icon{
+   text-align: center;
+   color: black;
+   font-size: 3rem;
+}
+#CONTACT img{
+   height: 8vh;
+   text-align: center;
+}
+#CONTACT a{
+   color: black;
+   font-size: 3rem;
+}
+#CONTACT .insta{
+   text-align: left;
+   color: black;
+   font-size: 3rem;
+}
+#CONTACT .maipho a{
+   margin: 10px;
+   font-size: 2rem;
+}
+#CONTACT .fa-envelope{
+   color: skyblue;
+}
+#CONTACT .fa-phone{
+   color: skyblue;
+}
+/*  End CONTACT Section */
+
+/* icon contacts */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.main{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #091f27;
+    margin-bottom: -500px;
+}
+.icon{
+    width: 60px;
+    height: 55px;
+    border-radius: 100px;
+    background: #fff;
+    margin: 5px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+    font-family: cursive;
+    overflow: hidden;
+    color: skyblue;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+}
+.icon:hover{
+    width: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+.icon:hover a{
+    color: #fff;
+}
+.insta{
+   background-image: url("https://img.icons8.com/?size=2x&id=53889&format=png");
+   background-size: 50px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.insta i{
+   color: transparent;
+}
+.insta:hover{
+   background-color: black;
+   background: fa-brands fa-instagram;
+   background-image: revert;
+}
+.insta .fa-instagram:hover{
+   color: white;
+   width: 10px;
+   margin-left: 100px;
+}
+.icon .fa-tiktok{
+    color: skyblue;
+}
+.tk:hover{
+    background: black;
+    color: white;
+}
+.icon .fa-facebook-f{
+    color: skyblue;
+}
+.fb:hover{
+    background: #1A6ED8;
+}
+.icon .fa-pinterest{
+    color: skyblue;
+}
+.pin:hover{
+    background: red;
+}
+.icon:hover{
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+.icon:hover i{
+    color: #fff;
+}
+.icon .fa-youtube{
+    color: skyblue;
+}
+.yt:hover{
+    background: #FE0000;
+}
+.insta:hover{
+   background-color: black;
+   background: fa-brands fa-instagram;
+   background-image: revert;
+}
+.insta .fa-instagram:hover{
+   color: white;
+   margin-left: -21px;
+}
+/*  Frames */
+.maino{
+    display: flex;
+    text-align: center;
+    background: #091f27;
+    height: 40px;
+}
+.maipho{
+    width: 90px;
+    height: 40px;
+    border-radius: 1000px;
+    background-color: skyblue;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+}
+.maipho:hover{
+    height: 73px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.phnn{
+   background-image: url("https://img.icons8.com/?size=2x&id=78382&format=png");
+   background-position: center;
+   background-size: 42px;
+   background-repeat: no-repeat;
+}
+.phnn:hover{
+   background-color: darkgreen;
+   background: fa-brands fa-phone;
+   background-image: revert;
+   width: 220px;
+}
+.phnn i{
+   font-size: 21px;
+   text-align: center;
+   width: 1100px;
+   color: skyblue;
+}
+.eml i{
+   font-size: 20px;
+   text-align: center;
+   width: 1100px;
+   color: skyblue;
+}
+.eml{
+   background-image: url("https://img.icons8.com/?size=2x&id=YRRhCXfA0Vd0&format=png");
+   background-position: center;
+   background-size: 42px;
+   background-repeat: no-repeat;
+}
+.eml:hover{
+    width: 220px;
+    background: darkred;
+}
+.eml i{
+    font-size: 11.5px;
+}
+.eml i:hover{
+    font-size: 11.5px;
+}
+.middle{
+    color: #091f27;
+    margin: 0px;
+}
+/* Key Frames */
+@keyframes text_reveal_box{
+   50%{
+      width: 100%;
+      left: 0;
+   }
+   100%{
+      width: 0;
+      left: 100%;
+   }
+}
+@keyframes text_reveal{
+      100%{
+            color: #FFFFFF;
+}
+}
+/* Key Frames End */
+
+/* responsive */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .main{
+        flex-direction: column;
+    }
+}
+
+/* icon contacts End */
+
+
+.mala{
+    width: 50px;
+    height: 50px;
+    border-radius: 1000px;
+    background: skyblue;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+}
+.mala:hover{
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sales a{
+   font-size: 30px;
+   color: black;
+}
+.sales a:hover{
+   color: white;
+}
+.sales i{
+   color: skyblue;
+   text-align: center;
+   font-size: 26px;
+}
+.sales{
+   background-image: url("https://img.icons8.com/?size=2x&id=118288&format=png");
+   background-position: center;
+   background-size: 42px;
+   background-repeat: no-repeat;
+}
+.sales:hover{
+    height: 400px;
+    background: skyblue;
+}
+.best-sales{
+   color: skyblue;
+}
+
+   </style>
+   
+
+<body>
+   <section id="HOME">
+   <div class="HOME-a">
+
+
+                     <input type="checkbox" id="toggle">
+
+    <nav>
+
+        <a class="navbar-brand" href="#">
+            MB
+        </a>
+
+        <label class="navbar-toggler" for="toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="#HOME" data-after="Clothings">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="#CLOTHINGS" data-after="Clothings">CLOTHINGS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#PRODUCTS" data-after="Products">PRODUCTS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ABOUT" data-after="About">ABOUT</a></li>
+      <li class="nav-item"><a class="nav-link" href="#CONTACT" data-after="Contact">CONTACT</a></li>
+            </li>
+        </ul>
+    </nav>
+      <!-- sales Icon -->
+        <div class="mala sales"><br></br><br>
+         <i><a href="file:///C:/Users/user/Downloads/Codes/HTML-CSS/MensBeautyMB/Best%20Sales.html" target="_blank" class="best-sales">Best sales</a><br></br></br>
+         <i><a href="file:///C:/Users/user/Downloads/Codes/HTML-CSS/MensBeautyMB/Trendy.html" target="_blank" class="best-sales">Trendy</a><br></br></br>
+         <i><a href="file:///C:/Users/user/Downloads/Codes/HTML-CSS/MensBeautyMB/Winter.html" target="_blank" class="best-sales">Winter</a><br></br></br></br>
+         <i><a href="file:///C:/Users/user/Downloads/Codes/HTML-CSS/MensBeautyMB/Summer.html" target="_blank" class="best-sales">Summer</a>
+      </div>
+                  </div>
+               </div>
+            </div>
+ <!--Home Section-->
+  <section id="Home">
+   <div class="Home container">
+          <h1><br></br>Mens Beauty<span></span></h1>
+        </div>
+     </div>
+
+  </section>
+         <!--End Home Section-->
+   <section id="CLOTHINGS">
+   <div class="CLOTHINGS">
+      <h2 class="CLOTHINGS-title">CLOTHINGS<br></br><br></br><br></br><br></br></h2>
+      <p></p>
+   </div>
+   <section id="PRODUCTS">
+   <div class="PRODUCTS">
+      <h2 class="PRODUCTS-title">PRODUCTS<br></br><br></br><br></br><br></br></h2>
+      <p>Coming Soon...</p>
+   </div>
+   <section id="ABOUT">
+   <div class="ABOUT">
+      <h2 class="ABOUT-title">ABOUT<br></br><br></br><br></br><br></br></h2>
+   </div>
+   <section id="CONTACT">
+   <div class="CONTACT">
+      <h2 class="CONTACT-title">CONTACT</h2>
+   </div>
+      <div class="main">
+        <!-- Facebook Icon -->
+        <div class="icon fb">
+            <a href="mailto:mensbeautymb@gmail.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+
+        <!-- Twitter Icon -->
+        <div class="icon tk">
+            <a href="https://www.youtube.com/@MensBeautyMB" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        <!-- Instagram Icon -->
+        <div class="icon insta">
+            <a href="https://www.instagram.com/rony_malaebb/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <!-- GitHub Icon -->
+        <div class="icon pin">
+            <a href="https://www.pinterest.com/mensbeautymb/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+
+        <!-- YouTube Icon -->
+        <div class="icon yt">
+            <a href="https://www.youtube.com/@MensBeautyMB" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+         <div class="maino">
+      <!-- Phone Icon -->
+      <div class="maipho phnn">
+         <a href="tel:+96597351110" target="_blank"><i class="fas fa-phone">+965 97351110</a></i>
+      </div>
+      <div class="middle split">
+           <a><i class=""></i></a>
+         
+      <!-- Email Icon -->
+        <div class="maipho eml">
+         <a href="mailto:mensbeautymb@gmail.com" target="_blank"><i class="fa-solid fa-envelope">MensBeautyMB@gmail.com</a></i>
+      </div>
+   </div>
+</body>
+</html>
